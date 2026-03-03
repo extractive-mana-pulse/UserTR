@@ -32,7 +32,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -79,11 +78,8 @@ fun RetryScreen(
                     MaterialTheme.colorScheme.error,
                 modifier = Modifier
                     .size(72.dp)
-                    .then(
-                        if (isRetrying) Modifier.rotate(rotation) else Modifier
-                    )
                     .graphicsLayer(
-                        // put here in order to fix recomposition
+                        rotationZ = rotation
                     )
             )
 
