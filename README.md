@@ -9,52 +9,6 @@ The implementation follows the main requirements described in the technical task
 
 The goal of this project is: Fetches users and posts from a public API, Caches data locally, Supports offline mode, Allows marking posts as favorites, Demonstrates proper state handling (Loading / Success / Error), Shares business logic between Android and iOS, The goal of this project is to showcase architecture decisions, state management, and KMM integration rather than just UI implementation.
 
-### 🧱 Tech Stack
-
-- KMP & CMP
-- Ktor 
-- Room
-- Jetpack Compose – UI (Android & iOS)
-- Coroutines + Flow
-- MVVM + Clean Architecture
-- Dependency Injection (Koin)
-- Navigation Compose
-
-### 🌐 API
-
-- _https://jsonplaceholder.typicode.com_
-
-### 🗄 Offline-First Approach
-
-All fetched data is **cached** locally. The app displays the last successful data in **offline mode**. Favorite posts are stored in a **separate local table**. Local database acts as the single source of truth.
-
-### 📲 Screens
-
-* Splash Screen
-* User List Screen
-* Post List Screen
-* Post Detail Screen
-* Favorites Screen
-
-### Each screen properly handles:
-* Loading state
-* Success state
-* Error state
-
-### 🏗 Architecture
-
-The project follows Clean Architecture principles:
-
-presentation/
-domain/
-data/
-
-### Clear separation of concerns
-
-- Repository pattern
-- Reactive UI state using Flow
-- Scalable and testable structure
-
 ### 📹 Demo Videos
 
 <details>
@@ -108,3 +62,49 @@ https://github.com/user-attachments/assets/eb1dacac-b1e3-44ac-afba-b7680d345b47
   | <img width="260" alt="image" src="https://github.com/user-attachments/assets/c7361677-8930-4bde-9667-b5c99d255d71" /> | <img width="260" alt="Simulator Screenshot - iPhone 17 - 2026-03-03 at 23 04 17" src="https://github.com/user-attachments/assets/1ea5fb5b-f412-4c58-a1bc-698f8eda0d8e" /> |
 
 </details>
+
+### 🧱 Tech Stack
+
+- KMP & CMP
+- Ktor 
+- Room
+- Jetpack Compose – UI (Android & iOS)
+- Coroutines + Flow
+- MVVM + Clean Architecture
+- Dependency Injection (Koin)
+- Navigation Compose
+
+### 🌐 API
+
+- _https://jsonplaceholder.typicode.com_
+
+### 🗄 Offline-First Approach
+
+All fetched data is **cached** locally. The app displays the last successful data in **offline mode**. Favorite posts are stored in a **separate local table**. Local database acts as the single source of truth.
+
+### 📲 Screens
+
+* Splash Screen
+* User List Screen
+* Post List Screen
+* Post Detail Screen
+* Favorites Screen
+
+### Each screen properly handles:
+* Loading state
+* Success state
+* Error state
+
+### 🏗 Architecture
+
+The project follows Clean Architecture principles:
+
+presentation/
+domain/
+data/
+
+### Clear separation of concerns
+
+- Repository pattern
+- Reactive UI state using Flow
+- Scalable and testable structure
