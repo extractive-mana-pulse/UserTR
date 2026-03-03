@@ -35,12 +35,17 @@ fun UserListScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Posts") },
+                title = {
+                    Text(
+                        text = "Users",
+                        style = MaterialTheme.typography.titleLarge
+                    )
+                },
                 actions = {
                     IconButton(onClick = onNavigateToFavorite) {
                         Icon(
                             imageVector = Icons.Filled.Star,
-                            contentDescription = "Favorites",
+                            contentDescription = null,
                             tint = MaterialTheme.colorScheme.primary
                         )
                     }
