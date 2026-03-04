@@ -1,0 +1,15 @@
+<resources>
+  <string name="posts">Посты!</string>
+  <string name="select_language">Выбрать язык</string>
+  <string name="showing_cached_data">Показывать кэшированные данные</string>
+  <string name="post_detail">Детали поста</string>
+  <string name="favorite">Сохраненные</string>
+  <string name="no_favorite_yet">Нет сохраненных</string>
+  <string name="tap_to_fav">Нажмите на ⭐ чтобы сохранить пост</string>
+  <string name="retrying">Повторная попытка…</string>
+  <string name="failed_load">Ошибка загрузки</string>
+  <string name="users">Пользователи</string>
+  <string name="english">Английский</string>
+  <string name="uzbek">Узбекский</string>
+  <string name="russian">Русский</string>
+</resources>

@@ -57,7 +57,7 @@ internal fun PostItem(
         IconButton(onClick = onFavoriteToggle) {
             Icon(
                 imageVector = if (isFavorite) Icons.Filled.Star else Icons.Outlined.StarOutline,
-                contentDescription = if (isFavorite) "Remove from favorites" else "Add to favorites",
+                contentDescription = null,
                 tint = if (isFavorite)
                     MaterialTheme.colorScheme.primary
                 else

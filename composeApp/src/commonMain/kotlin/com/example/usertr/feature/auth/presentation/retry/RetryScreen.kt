@@ -24,7 +24,6 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -38,6 +37,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun RetryScreen(
@@ -71,7 +71,7 @@ fun RetryScreen(
                     Icons.Outlined.Refresh
                 else
                     Icons.Default.CloudOff,
-                contentDescription = if (isRetrying) "Loading" else "Error",
+                contentDescription = null,
                 tint = if (isRetrying)
                     MaterialTheme.colorScheme.primary
                 else
@@ -86,7 +86,7 @@ fun RetryScreen(
             Spacer(modifier = Modifier.height(8.dp))
 
             Text(
-                text = if (isRetrying) "Retrying…" else "Failed to Load",
+                text = if (isRetrying) stringResource(Res.string.retrying) else stringResource(Res.string.failed_load),
                 style = MaterialTheme.typography.headlineSmall,
                 fontWeight = FontWeight.SemiBold,
                 color = MaterialTheme.colorScheme.onSurface
@@ -118,7 +118,14 @@ fun RetryScreen(
                         color = MaterialTheme.colorScheme.onPrimary
                     )
                     Spacer(modifier = Modifier.width(10.dp))
-                    Text("Retrying…")
+                    Text(
+                        text = stringResource(Res.string.retrying),
+                        style = MaterialTheme.typography.bodyMedium.copy(
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.Medium,
+                            color = MaterialTheme.colorScheme.onPrimary,
+                        )
+                    )
                 } else {
                     Icon(
                         imageVector = Icons.Outlined.Refresh,
@@ -128,17 +135,6 @@ fun RetryScreen(
                     Spacer(modifier = Modifier.width(8.dp))
                     Text("Try Again", fontSize = 16.sp, fontWeight = FontWeight.Medium)
                 }
-            }
-
-            TextButton(
-                onClick = {
-                    /* navigate back */
-                }
-            ) {
-                Text(
-                    text = "Go Back",
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
             }
         }
     }

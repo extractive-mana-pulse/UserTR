@@ -1,0 +1,15 @@
+<resources>
+  <string name="posts">Posts!</string>
+  <string name="select_language">Select language</string>
+  <string name="showing_cached_data">Showing cached data</string>
+  <string name="post_detail">Post Detail</string>
+  <string name="favorite">Favorites</string>
+  <string name="no_favorite_yet">No favorites yet</string>
+  <string name="tap_to_fav">Tap ⭐ on any post to save it here</string>
+  <string name="retrying">Retrying…</string>
+  <string name="failed_load">Failed to load</string>
+  <string name="users">Users</string>
+  <string name="english">English</string>
+  <string name="uzbek">Uzbek</string>
+  <string name="russian">Russian</string>
+</resources>

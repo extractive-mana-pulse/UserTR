@@ -1,0 +1,15 @@
+<resources>
+  <string name="posts">Xabarlar!</string>
+  <string name="select_language">Tilni tanlang</string>
+  <string name="showing_cached_data">Keshlangan ma'lumotlar ko'rsatilmoqda</string>
+  <string name="post_detail">Post tafsilotlari</string>
+  <string name="favorite">Sevimlilar</string>
+  <string name="no_favorite_yet">Hali sevimlilar yo'q</string>
+  <string name="tap_to_fav">Istalgan postni shu yerda saqlash uchun ⭐ tugmasini bosing</string>
+  <string name="retrying">Qayta urinish…</string>
+  <string name="failed_load">Yuklab bo‘lmadi</string>
+  <string name="users">Foydalanuvchilar</string>
+  <string name="english">Ingliz</string>
+  <string name="uzbek">O'zbek</string>
+  <string name="russian">Russ</string>
+</resources>

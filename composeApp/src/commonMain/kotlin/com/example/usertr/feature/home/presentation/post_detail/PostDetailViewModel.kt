@@ -29,7 +29,6 @@ class PostDetailViewModel(
         viewModelScope.launch {
             _uiState.value = PostDetailUiState.Loading
 
-            // Fetch post from local DB and comments from network in parallel
             val postDeferred = async {
                 localDataSource.observePostById(postId).first()
             }
