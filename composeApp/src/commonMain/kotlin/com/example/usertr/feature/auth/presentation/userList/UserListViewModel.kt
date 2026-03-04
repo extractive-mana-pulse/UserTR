@@ -6,7 +6,11 @@ import com.example.usertr.core.mappers.toDomain
 import com.example.usertr.core.network.Result
 import com.example.usertr.feature.auth.data.UserLocalDataSource
 import com.example.usertr.feature.auth.domain.UserDataSource
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
 class UserListViewModel(
@@ -50,10 +54,7 @@ class UserListViewModel(
                     _isOffline.value = false
                 }
                 is Result.Error -> {
-                    println("❌ Network error: ${result.error}") // ← add this
                     _isOffline.value = true
-                    // DB flow will emit cached data automatically
-                    // only set error if DB is also empty
                     _error.value = result.error.name
                 }
             }

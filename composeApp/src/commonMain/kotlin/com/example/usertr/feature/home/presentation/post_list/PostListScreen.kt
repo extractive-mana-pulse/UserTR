@@ -18,18 +18,20 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.example.usertr.core.components.UserTrTopBar
 import com.example.usertr.feature.auth.presentation.retry.RetryScreen
 import com.example.usertr.feature.home.presentation.post_list.components.PostItem
+import org.jetbrains.compose.resources.stringResource
+import usertr.composeapp.generated.resources.Res
+import usertr.composeapp.generated.resources.posts
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -43,16 +45,10 @@ fun PostListScreen(
 ) {
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = { Text("Posts") },
-                navigationIcon = {
-                    IconButton(onClick = onBack) {
-                        Icon(
-                            imageVector = Icons.AutoMirrored.Outlined.ArrowBack,
-                            contentDescription = "Back"
-                        )
-                    }
-                }
+            UserTrTopBar(
+                onBack = onBack,
+                title = stringResource(Res.string.posts),
+                icon = Icons.AutoMirrored.Outlined.ArrowBack
             )
         }
     ) { innerPadding ->
@@ -80,7 +76,7 @@ fun PostListScreen(
 
             is PostListUiState.Success -> {
                 PullToRefreshBox(
-                    isRefreshing = false,          // spinner is hidden; PTR gesture is active
+                    isRefreshing = false,
                     onRefresh = onRefresh,
                     modifier = Modifier
                         .fillMaxSize()
@@ -102,7 +98,7 @@ fun PostListScreen(
                                     tint = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
                                 Text(
-                                    text = "Showing cached data",
+                                    text = stringResource(Res.string.showing_cached_data),
                                     style = MaterialTheme.typography.labelMedium,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
