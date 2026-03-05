@@ -1,4 +1,4 @@
-package com.example.usertr
+package com.example.usertr.core
 
 import com.example.usertr.feature.auth.data.UserLocalDataSource
 import org.koin.core.context.startKoin

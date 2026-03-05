@@ -10,6 +10,8 @@ import com.example.usertr.core.components.Loading
 import com.example.usertr.core.components.UserTrTopBar
 import com.example.usertr.feature.home.presentation.post_detail.components.PostDetailContent
 import org.jetbrains.compose.resources.stringResource
+import usertr.composeapp.generated.resources.Res
+import usertr.composeapp.generated.resources.post_detail
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

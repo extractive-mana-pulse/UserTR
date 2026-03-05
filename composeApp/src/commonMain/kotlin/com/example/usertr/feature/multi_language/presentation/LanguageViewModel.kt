@@ -23,7 +23,7 @@ class LanguageViewModel(
         .map { prefs -> prefs[languageCodeKey] }
         .stateIn(
             viewModelScope,
-            SharingStarted.Companion.WhileSubscribed(5000L),
+            SharingStarted.WhileSubscribed(5000L),
             getDefaultLocale()
         )
 

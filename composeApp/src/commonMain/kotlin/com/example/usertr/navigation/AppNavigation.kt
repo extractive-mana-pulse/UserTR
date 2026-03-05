@@ -85,8 +85,8 @@ fun AppNavigation(
                     onNavigateToFavorite = {
                         navController.navigate(Screens.Favorites)
                     },
-                    onSwitchLanguage = {
-                        language?.let { languageCode -> lanVm.switchLanguage(languageCode) }
+                    onSwitchLanguage = { languageCode ->
+                        lanVm.switchLanguage(languageCode)
                     }
                 )
             }

@@ -1,4 +1,4 @@
-package com.example.usertr.presentation
+package com.example.usertr.feature.multi_language.presentation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember

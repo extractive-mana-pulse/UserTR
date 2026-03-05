@@ -32,6 +32,7 @@ import com.example.usertr.feature.home.presentation.post_list.components.PostIte
 import org.jetbrains.compose.resources.stringResource
 import usertr.composeapp.generated.resources.Res
 import usertr.composeapp.generated.resources.posts
+import usertr.composeapp.generated.resources.showing_cached_data
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

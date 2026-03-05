@@ -19,6 +19,8 @@ import com.example.usertr.feature.home.presentation.favorite.components.EmptyFav
 import com.example.usertr.feature.home.presentation.post_list.Post
 import com.example.usertr.feature.home.presentation.post_list.components.PostItem
 import org.jetbrains.compose.resources.stringResource
+import usertr.composeapp.generated.resources.Res
+import usertr.composeapp.generated.resources.favorite
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

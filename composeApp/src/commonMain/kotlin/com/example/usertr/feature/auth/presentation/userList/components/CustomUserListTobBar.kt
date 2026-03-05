@@ -19,8 +19,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import org.jetbrains.compose.resources.stringResource
 import usertr.composeapp.generated.resources.Res
+import usertr.composeapp.generated.resources.english
+import usertr.composeapp.generated.resources.russian
 import usertr.composeapp.generated.resources.select_language
 import usertr.composeapp.generated.resources.users
+import usertr.composeapp.generated.resources.uzbek
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

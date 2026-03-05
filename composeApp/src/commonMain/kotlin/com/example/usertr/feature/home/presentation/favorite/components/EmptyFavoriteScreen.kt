@@ -20,6 +20,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.resources.stringResource
+import usertr.composeapp.generated.resources.Res
+import usertr.composeapp.generated.resources.no_favorite_yet
+import usertr.composeapp.generated.resources.tap_to_fav
 
 @Composable
 internal fun EmptyFavoriteScreen(innerPadding: PaddingValues) {

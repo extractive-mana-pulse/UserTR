@@ -12,6 +12,7 @@ import com.example.usertr.feature.home.domain.PostDataSource
 import com.example.usertr.feature.home.presentation.favorite.FavoritesViewModel
 import com.example.usertr.feature.home.presentation.post_detail.PostDetailViewModel
 import com.example.usertr.feature.home.presentation.post_list.PostListViewModel
+import com.example.usertr.feature.multi_language.presentation.LanguageViewModel
 import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 
@@ -43,4 +44,6 @@ val appModule = module {
     }
 
     viewModel { FavoritesViewModel(get()) }
+
+    viewModel { LanguageViewModel(get()) }
 }
